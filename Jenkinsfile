@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'cd "${glinttTest}" && git checkout master && git up'
+        sh 'cd "$glinttTest" && git checkout master && git up'
       }
     }
   }
