@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:greatSch="glintt/mdw/xsd/xsd_greatingschema"
+            targetNamespace="glintt/mdw/xsd/xsd_greatingschema" 
+            elementFormDefault="qualified">
+  <xsd:element name="person" type="greatSch:personType"/>
+  <xsd:complexType name="personType">
+    <xsd:sequence>
+      <xsd:element name="FirstName" type="xsd:string"/>
+      <xsd:element name="LastName" type="xsd:string"/>
+      <xsd:element name="Birthdate" type="xsd:date"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="greeting" type="greatSch:greetingType"/>
+  <xsd:complexType name="greetingType">
+    <xsd:sequence>
+      <xsd:element name="Salutation" type="xsd:string"/>
+      <xsd:element name="Message" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

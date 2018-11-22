@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con1="http://www.bea.com/wli/sb/stages/config" xmlns:con2="http://www.bea.com/wli/sb/stages/transform/config">
+    <con:coreEntry>
+        <con:binding type="SOAP" isSoap12="false" xsi:type="con:SoapBindingType">
+            <con:wsdl ref="OSB_Greeting/ProxyService"/>
+            <con:binding>
+                <con:name>greeting_bind</con:name>
+                <con:namespace>http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService</con:namespace>
+            </con:binding>
+        </con:binding>
+        <con:xqConfiguration>
+            <con:snippetVersion>1.0</con:snippetVersion>
+        </con:xqConfiguration>
+    </con:coreEntry>
+    <con:router>
+        <con:pipeline type="request" name="request-N53edd739.57503456.0.1673b16b988.N7f3c">
+            <con:stage id="_StageId-N53edd739.57503456.0.1673b16b988.N7f3a" name="Stage1">
+                <con:context/>
+                <con:actions/>
+            </con:stage>
+        </con:pipeline>
+        <con:pipeline type="response" name="response-N53edd739.57503456.0.1673b16b988.N7f3b">
+            <con:stage id="_StageId-N53edd739.57503456.0.1673b16b988.N7f39" name="Stage1">
+                <con:context>
+                    <con1:userNsDecl prefix="xsd1" namespace="glintt/mdw/xsd/xsd_greatingschema"/>
+                </con:context>
+                <con:actions>
+                    <con2:replace varName="body" contents-only="true">
+                        <con1:id>_ActionId-N53edd739.57503456.0.1673b16b988.N7f36</con1:id>
+                        <con2:expr>
+                            <con1:xqueryTransform>
+                                <con1:resource ref="OSB_Greeting/mapeamento_Greeting"/>
+                                <con1:param name="person">
+                                    <con1:path>$body/xsd1:person</con1:path>
+                                </con1:param>
+                            </con1:xqueryTransform>
+                        </con2:expr>
+                    </con2:replace>
+                </con:actions>
+            </con:stage>
+        </con:pipeline>
+        <con:flow>
+            <con:pipeline-node name="Pipeline Pair Node1">
+                <con:request>request-N53edd739.57503456.0.1673b16b988.N7f3c</con:request>
+                <con:response>response-N53edd739.57503456.0.1673b16b988.N7f3b</con:response>
+            </con:pipeline-node>
+        </con:flow>
+    </con:router>
+</con:pipelineEntry>

@@ -1,0 +1,31 @@
+<wsdl:definitions name="ProxyService" targetNamespace="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService" xmlns:tns="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService" xmlns:inp1="glintt/mdw/xsd/xsd_greatingschema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="glintt/mdw/xsd/xsd_greatingschema" schemaLocation="Schema/xsd_GreatingSchema.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="requestMessage">
+        <wsdl:part name="person" element="inp1:person"/>
+    </wsdl:message>
+    <wsdl:message name="replyMessage">
+        <wsdl:part name="greeting" element="inp1:greeting"/>
+    </wsdl:message>
+    <wsdl:portType name="greeting_ptt">
+        <wsdl:operation name="greeting_oper">
+            <wsdl:input message="tns:requestMessage"/>
+            <wsdl:output message="tns:replyMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="greeting_bind" type="tns:greeting_ptt">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="greeting_oper">
+            <soap:operation style="document" soapAction="greeting_oper"/>
+            <wsdl:input>
+                <soap:body use="literal" namespace="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" namespace="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>
