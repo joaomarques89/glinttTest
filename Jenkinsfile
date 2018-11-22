@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo %cd%'
+        bat 'echo %cd%'
       }
     }
   }
