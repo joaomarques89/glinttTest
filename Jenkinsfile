@@ -8,7 +8,8 @@ pipeline {
     }
     stage('Build/Packaging') {
       steps {
-        bat 'cd OSB_Greeting mvn compile'
+        bat 'cd OSB_Greeting'
+        bat 'mvn compile'
       }
     }
   }
