@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build/Packaging') {
       steps {
-        bat 'cd C:\\Users\\joao.m.marques\\.jenkins\\workspace\\glinttTest_master\\OSB_Greeting mvn compile'
+        bat 'cd OSB_Greeting mvn compile'
       }
     }
   }
