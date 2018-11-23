@@ -8,8 +8,7 @@ pipeline {
     }
     stage('Build/Packaging') {
       steps {
-        sh '''echo "ASDDA"
-cd /'''
+        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "cd /c/Users/joao.m.marques/.jenkins/workspace/glinttTest_master/OSB_Greeting/; mvn compile"'
       }
     }
   }
