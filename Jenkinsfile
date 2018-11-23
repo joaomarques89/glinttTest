@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build/Packaging') {
       steps {
-        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "cd /; pwd"'
+        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "echo $MAVEN_HOME"'
       }
     }
   }
