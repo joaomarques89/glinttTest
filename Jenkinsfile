@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build/Packaging') {
       steps {
-        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "echo $MAVEN_HOME"'
+        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "mvn compile"'
       }
     }
   }
