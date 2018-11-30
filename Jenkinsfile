@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build/Packaging') {
       steps {
-        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "mvn compile"'
+        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "cd OSB_Greeting mvn compile"'
       }
     }
   }
