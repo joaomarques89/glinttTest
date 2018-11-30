@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "mvn -f c/Users/joao.m.marques/.jenkins/workspace/glinttTest_master/OSB_Greeting  pre-integration-test -DoracleServerUrl=http://localhost:7101 -DoracleUsername=weblogic -DoraclePassword=welcome1 -DoracleHome=$JDEV_HOME'
+        bat '"C:\\Program Files\\Git\\bin\\sh.exe" --login -i -c "mvn -f /c/Users/joao.m.marques/.jenkins/workspace/glinttTest_master/OSB_Greeting  pre-integration-test -DoracleServerUrl=http://localhost:7101 -DoracleUsername=weblogic -DoraclePassword=welcome1 -DoracleHome=$JDEV_HOME'
       }
     }
   }
