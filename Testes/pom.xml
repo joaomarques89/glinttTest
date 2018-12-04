@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <name>Enterprise Quote Clearance</name>
+   <groupId>com.esb.soapui</groupId>
+   <artifactId>EnterpriseQClearance</artifactId>
+   <version>1.0-SNAPSHOT</version>
+   <packaging>jar</packaging>
+   <description>Enterprise Quote Clearance</description>  
+
+  <pluginRepositories>  
+  <pluginRepository>
+        <id>smartbear-sweden-plugin-repository</id>
+        <url>http://www.soapui.org/repository/maven2/</url>
+    </pluginRepository>
+ </pluginRepositories>   
+   <build>
+      <plugins>            
+         <plugin>
+            <groupId>com.smartbear.soapui</groupId>
+   <artifactId>soapui-maven-plugin</artifactId>
+   <version>4.6.1</version>
+            <executions>
+               <execution>
+                  <id>QClearanceTest</id>
+                  <goals>
+                     <goal>test</goal> 
+                  </goals>
+                  <phase>test</phase>           
+               </execution>
+            </executions>                       
+            <configuration>
+               <projectFile>C:\Users\joao.m.marques\.jenkins\workspace\glinttTest_master\Testes\OSB_Greeting_FORTESTES_soapuiproject.xml</projectFile>
+      <testSuite>CiscoServiceSoapBinding TestSuite</testSuite>
+      <testCase>ciscoTest TestCase</testCase>
+      <endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</endpoint>               
+               <outputFolder>C:\Users\joao.m.marques\.jenkins\workspace\glinttTest_master\Testes\surefire-reports</outputFolder>
+               <junitReport>true</junitReport>
+               <printReport>false</printReport>
+               <!--projectProperties>
+                  <projectProperty>NameInsured=IBM</projectProperty>
+               </projectProperties>
+      <settingsFile>C:\Users\rui.m.costa\soapui-settings.xml</settingsFile-->
+            </configuration>
+         </plugin>   
+      </plugins>
+   </build>          
+</project>
