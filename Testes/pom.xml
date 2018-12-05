@@ -33,8 +33,8 @@
             </executions>                       
             <configuration>
                <projectFile>C:\Users\joao.m.marques\.jenkins\workspace\glinttTest_master\Testes\OSB_Greeting_FORTESTES_soapuiproject.xml</projectFile>
-      <testSuite>CiscoServiceSoapBinding TestSuite</testSuite>
-      <testCase>ciscoTest TestCase</testCase>
+      <testSuite>TestesForJenkins</testSuite>
+      <testCase>TestCase 1</testCase>
       <endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</endpoint>               
                <outputFolder>C:\Users\joao.m.marques\.jenkins\workspace\glinttTest_master\Testes\surefire-reports</outputFolder>
                <junitReport>true</junitReport>
