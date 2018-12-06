@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="138c38bf-a2eb-48b7-8652-8b543b7e6966" activeEnvironment="Default" name="OSB_Greeting_FORTESTES" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="32415965-dcb0-4e33-97f3-42aaee2ea38e" wsaVersion="NONE" name="greeting_bind" type="wsdl" bindingName="{http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService}greeting_bind" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/OSBGreeting/pservice_greetingService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:7101/OSBGreeting/pservice_greetingService?wsdl"><con:part><con:url>http://localhost:7101/OSBGreeting/pservice_greetingService?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions name="ProxyService" targetNamespace="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="glintt/mdw/xsd/xsd_greatingschema" xmlns:WL5G3N2="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
+<con:soapui-project id="138c38bf-a2eb-48b7-8652-8b543b7e6966" activeEnvironment="Default" name="OSB_Greeting_FORTESTES" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+	<con:interface xsi:type="con:WsdlInterface" id="32415965-dcb0-4e33-97f3-42aaee2ea38e" wsaVersion="NONE" name="greeting_bind" type="wsdl" bindingName="{http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService}greeting_bind" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/OSBGreeting/pservice_greetingService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache type="TEXT" rootPart="http://localhost:7101/OSBGreeting/pservice_greetingService?wsdl">
+			<con:part>
+				<con:url>http://localhost:7101/OSBGreeting/pservice_greetingService?wsdl</con:url>
+				<con:content>
+					<![CDATA[<WL5G3N0:definitions name="ProxyService" targetNamespace="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="glintt/mdw/xsd/xsd_greatingschema" xmlns:WL5G3N2="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
   <WL5G3N0:types>
     <xsd:schema xmlns:inp1="glintt/mdw/xsd/xsd_greatingschema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://xmlns.oracle.com/OSB_Applications/ServiceBusWithAlert/ProxyService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <xsd:import namespace="glintt/mdw/xsd/xsd_greatingschema" schemaLocation="http://localhost:7101/OSBGreeting/pservice_greetingService?SCHEMA%2FOSB_Greeting%2FSchema%2Fxsd_GreatingSchema"/>
@@ -35,7 +43,14 @@
       <WL5G3N3:address location="http://localhost:7101/OSBGreeting/pservice_greetingService"/>
     </WL5G3N0:port>
   </WL5G3N0:service>
-</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:7101/OSBGreeting/pservice_greetingService?SCHEMA%2FOSB_Greeting%2FSchema%2Fxsd_GreatingSchema</con:url><con:content><![CDATA[<xsd:schema targetNamespace="glintt/mdw/xsd/xsd_greatingschema" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:greatSch="glintt/mdw/xsd/xsd_greatingschema">
+</WL5G3N0:definitions>]]>
+				</con:content>
+				<con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+			</con:part>
+			<con:part>
+				<con:url>http://localhost:7101/OSBGreeting/pservice_greetingService?SCHEMA%2FOSB_Greeting%2FSchema%2Fxsd_GreatingSchema</con:url>
+				<con:content>
+					<![CDATA[<xsd:schema targetNamespace="glintt/mdw/xsd/xsd_greatingschema" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:greatSch="glintt/mdw/xsd/xsd_greatingschema">
   <xsd:element name="person" type="greatSch:personType"/>
   <xsd:complexType name="personType">
     <xsd:sequence>
@@ -51,7 +66,24 @@
       <xsd:element name="Message" type="xsd:string"/>
     </xsd:sequence>
   </xsd:complexType>
-</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</con:endpoint></con:endpoints><con:operation id="564cb5fe-9367-47c1-bff7-8147b12973e9" isOneWay="false" action="greeting_oper" name="greeting_oper" bindingOperationName="greeting_oper" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5b44d154-afab-4daa-8fce-ea89b54fe956" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="glintt/mdw/xsd/xsd_greatingschema">\r
+</xsd:schema>]]>
+				</con:content>
+				<con:type>http://www.w3.org/2001/XMLSchema</con:type>
+			</con:part>
+		</con:definitionCache>
+		<con:endpoints>
+			<con:endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</con:endpoint>
+		</con:endpoints>
+		<con:operation id="564cb5fe-9367-47c1-bff7-8147b12973e9" isOneWay="false" action="greeting_oper" name="greeting_oper" bindingOperationName="greeting_oper" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+			<con:settings/>
+			<con:call id="5b44d154-afab-4daa-8fce-ea89b54fe956" name="Request 1">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+				</con:settings>
+				<con:encoding>UTF-8</con:encoding>
+				<con:endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</con:endpoint>
+				<con:request>
+					<![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="glintt/mdw/xsd/xsd_greatingschema">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <xsd:person>\r
@@ -60,7 +92,36 @@
          <xsd:Birthdate>1989-02-23</xsd:Birthdate>\r
       </xsd:person>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="greeting_oper"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="a3f7a506-a247-48e1-b04a-2963893b7c86" name="TestesForJenkins"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4a2f07ee-d0fc-4f84-9d15-784cc21a8866" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="request" id="cca97b7b-14d8-4364-be3d-1df85776fdfa" name="greeting_oper - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>greeting_bind</con:interface><con:operation>greeting_oper</con:operation><con:request name="greeting_oper - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f215a579-744a-42c2-9196-c7e7e6ca353d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="glintt/mdw/xsd/xsd_greatingschema">\r
+</soapenv:Envelope>]]>
+				</con:request>
+				<con:credentials>
+					<con:authType>Global HTTP Settings</con:authType>
+				</con:credentials>
+				<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+				<con:jmsPropertyConfig/>
+				<con:wsaConfig mustUnderstand="NONE" version="200508" action="greeting_oper"/>
+				<con:wsrmConfig version="1.2"/>
+			</con:call>
+		</con:operation>
+	</con:interface>
+	<con:testSuite id="a3f7a506-a247-48e1-b04a-2963893b7c86" name="TestesForJenkins">
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="4a2f07ee-d0fc-4f84-9d15-784cc21a8866" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="request" id="cca97b7b-14d8-4364-be3d-1df85776fdfa" name="greeting_oper - Request 1">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>greeting_bind</con:interface>
+					<con:operation>greeting_oper</con:operation>
+					<con:request name="greeting_oper - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f215a579-744a-42c2-9196-c7e7e6ca353d">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://localhost:7101/OSBGreeting/pservice_greetingService</con:endpoint>
+						<con:request>
+							<![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="glintt/mdw/xsd/xsd_greatingschema">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <xsd:person>\r
@@ -69,4 +130,27 @@
          <xsd:Birthdate>1989-02-23</xsd:Birthdate>\r
       </xsd:person>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a618a930-57c8-49aa-aeee-81ba2a076388" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="greeting_oper"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]>
+						</con:request>
+						<con:assertion type="SOAP Response" id="a618a930-57c8-49aa-aeee-81ba2a076388" name="SOAP Response"/>
+						<con:credentials>
+							<con:selectedAuthProfile>Global HTTP Settings</con:selectedAuthProfile>
+							<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+							<con:authType>Global HTTP Settings</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508" action="greeting_oper"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+		</con:testCase>
+		<con:properties/>
+	</con:testSuite>
+	<con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:oAuth1ProfileContainer/>
+</con:soapui-project>
